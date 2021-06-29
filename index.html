@@ -17,7 +17,12 @@
        <div class="section_inner section_inner--wide">
            <div class="main_navigation">
                 <a class="logo" href="#"></a>
-                <nav class="nav">
+                <button class="btn-burger">
+                    <span class="btn-burger_line"></span>
+                    <span class="btn-burger_line"></span>
+                    <span class="btn-burger_line"></span>
+                </button>
+                <nav class="nav nav--header">
                     <ul class="nav-wrapper">
                         <li class="nav-wrapper-item">
                             <a href="#" class="nav-wrapper-item-link">Home</a>
@@ -37,7 +42,7 @@
                     </ul>
                 </nav>
 
-                <div class="main_socials">
+                <div class="main_socials main_socials--header">
                     <ul class="socials-wrapper">
                         <li class="socials-wrapper-item">
                             <a href="#" class="socials-wrapper-item-link">
@@ -78,28 +83,68 @@
     <!-- / header -->
 
     <!-- hero-image -->
-    <section class="section_outer section-hero-image">
-        <div class="section_inner section_inner--hero">
-            <div class="hero_content">
-                <h4 class="hero_content-suptitle">plan your life</h4>
-                <h1 class="hero_content-title">Increase your <span class="bold_text">productivity</span></h1>
-                <p class="hero_content-p">
-                    Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. 
-                    Usu atqui laudem an, insolens gubergren similique est cu. 
-                    Et vel modus congue vituperata.
-                </p>
-                <div class="hero_content_btn">
-                    <a href="#">
-                        <i class="icon_play"></i>
-                    </a>
+    <section class="section_outer section-hero-image swiper-container">
+        <ul class="slider-image swiper-wrapper">
+            <li class="slider-image-item swiper-slide">
+                <div class="section_inner section_inner--hero">
+                    <div class="hero_content">
+                        <h4 class="hero_content-suptitle">plan your life</h4>
+                        <h1 class="hero_content-title">Increase your <span class="bold_text">productivity</span></h1>
+                        <p class="hero_content-p">
+                            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. 
+                            Usu atqui laudem an, insolens gubergren similique est cu. 
+                            Et vel modus congue vituperata.
+                        </p>
+                        <div class="hero_content_btn">
+                            <a href="#">
+                                <i class="icon_play"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero_content_btns">
-                    <div class="hero_content_btns-item"></div>
-                    <div class="hero_content_btns-item"></div>
-                    <div class="hero_content_btns-item"></div>
+            </li>
+
+            <li class="slider-image-item swiper-slide">
+                <div class="section_inner section_inner--hero">
+                    <div class="hero_content">
+                        <h4 class="hero_content-suptitle">plan your life</h4>
+                        <h1 class="hero_content-title">Increase your <span class="bold_text">productivity</span></h1>
+                        <p class="hero_content-p">
+                            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. 
+                            Usu atqui laudem an, insolens gubergren similique est cu. 
+                            Et vel modus congue vituperata.
+                        </p>
+                        <div class="hero_content_btn">
+                            <a href="#">
+                                <i class="icon_play"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </li>
+
+            <li class="slider-image-item swiper-slide">
+                <div class="section_inner section_inner--hero">
+                    <div class="hero_content">
+                        <h4 class="hero_content-suptitle">plan your life</h4>
+                        <h1 class="hero_content-title">Increase your <span class="bold_text">productivity</span></h1>
+                        <p class="hero_content-p">
+                            Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. 
+                            Usu atqui laudem an, insolens gubergren similique est cu. 
+                            Et vel modus congue vituperata.
+                        </p>
+                        <div class="hero_content_btn">
+                            <a href="#">
+                                <i class="icon_play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
+        <ul class="dots swiper-pagination">
+        </ul>
     </section>   
     <!-- / hero-image -->
 
@@ -298,9 +343,9 @@
     <!-- footer -->
     <section class="section_outer section-footer">
         <div class="section_inner section_inner--wide">
-            <div class="main_navigation">
-                <a class="logo" href="#"></a>
-                <nav class="nav">
+            <div class="main_navigation main_navigation--footer">
+                <a class="logo logo--footer" href="#"></a>
+                <nav class="nav nav--footer">
                     <ul class="nav-wrapper">
                         <li class="nav-wrapper-item">
                             <a href="#" class="nav-wrapper-item-link">Home</a>
@@ -353,7 +398,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a class="btn" href="#">Get started</a>
+                    <a class="btn btn--footer" href="#">Get started</a>
             </div>
            </div>
            <div class="copyright">
@@ -364,5 +409,13 @@
     </section>   
     <!-- / footer -->
     
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>
