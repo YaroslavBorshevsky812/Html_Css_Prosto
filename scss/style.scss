@@ -134,13 +134,39 @@ path{
             padding-top: $padding-vertical-xs;
             padding-bottom: $padding-vertical-xs;
         }
+        &::before {
+            content: '';
+            position: fixed;
+            top: 202px;
+            left: 0;
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        &--active {
+            &::before {
+                display: block;
+            }
+        }
     }
 
     .main_navigation {
         display: flex;
         align-items: center;
-      
+        @media (max-width: 990px) {
+            flex-wrap: wrap;
+        }
     }
+
+    .section-header--active .navigation_wrapper{
+        display: flex;
+    }
+
+    .section-header--active .body{
+        overflow: hidden; /* Hide scrollbars */
+    }
+
 
     .main_socials {
         display: flex;
@@ -149,6 +175,9 @@ path{
     }
 
     .logo {
+        display: block;
+        width: 100%;
+        height: auto;
         background-color: #5e81fe;
         border-radius: 100%;
         width: $base * 6;
@@ -158,13 +187,17 @@ path{
 
     .nav--header{
         @media (max-width: 990px) {
-            display: none;
+            margin-bottom: 30px;
         }
     }
 
-    .main_socials--header {
+    .navigation_wrapper {
+        display: flex;
+        width: 100%;
+        align-items: center;
         @media (max-width: 990px) {
             display: none;
+            flex-direction: column;
         }
     }
 
@@ -225,17 +258,21 @@ path{
         &:hover {
             background-color: #305ab4;;
         }
+        @media (max-width: 990px) {
+            margin: 0 auto;
+        }
 
     }
 
 
     .btn-burger {
-        margin-left: auto;
         display: none;
+        margin-left: auto;
         padding: 8px 8px;
         background: none;
         border: 1px solid #D1D1E4;
         border-radius: 4px;
+        cursor: pointer;
         &_line {
             display: block;
             width: $base * 4;
@@ -244,6 +281,12 @@ path{
             & + & {
                 margin-top: $base;
             }
+        }
+        &:active .btn-burger_line{
+            background-color: grey;
+        }
+        &:active {
+            border: 1px solid grey;
         }
         @media (max-width: 990px) {
             display: block;

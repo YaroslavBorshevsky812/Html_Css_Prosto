@@ -77,10 +77,31 @@ path {
   .section-header .section_inner {
     padding-top: 20px;
     padding-bottom: 20px; }
+  .section-header::before {
+    content: '';
+    position: fixed;
+    top: 202px;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .section-header--active::before {
+    display: block; }
 
 .main_navigation {
   display: flex;
   align-items: center; }
+  @media (max-width: 990px) {
+    .main_navigation {
+      flex-wrap: wrap; } }
+
+.section-header--active .navigation_wrapper {
+  display: flex; }
+
+.section-header--active .body {
+  overflow: hidden;
+  /* Hide scrollbars */ }
 
 .main_socials {
   display: flex;
@@ -88,6 +109,9 @@ path {
   margin-left: auto; }
 
 .logo {
+  display: block;
+  width: 100%;
+  height: auto;
   background-color: #5e81fe;
   border-radius: 100%;
   width: 24px;
@@ -96,11 +120,16 @@ path {
 
 @media (max-width: 990px) {
   .nav--header {
-    display: none; } }
+    margin-bottom: 30px; } }
 
-@media (max-width: 990px) {
-  .main_socials--header {
-    display: none; } }
+.navigation_wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center; }
+  @media (max-width: 990px) {
+    .navigation_wrapper {
+      display: none;
+      flex-direction: column; } }
 
 .nav-wrapper {
   display: flex; }
@@ -141,14 +170,18 @@ path {
   transition: 0.2s linear; }
   .btn:hover {
     background-color: #305ab4; }
+  @media (max-width: 990px) {
+    .btn {
+      margin: 0 auto; } }
 
 .btn-burger {
-  margin-left: auto;
   display: none;
+  margin-left: auto;
   padding: 8px 8px;
   background: none;
   border: 1px solid #D1D1E4;
-  border-radius: 4px; }
+  border-radius: 4px;
+  cursor: pointer; }
   .btn-burger_line {
     display: block;
     width: 16px;
@@ -156,6 +189,10 @@ path {
     background-color: #d6dae5; }
     .btn-burger_line + .btn-burger_line {
       margin-top: 4px; }
+  .btn-burger:active .btn-burger_line {
+    background-color: grey; }
+  .btn-burger:active {
+    border: 1px solid grey; }
   @media (max-width: 990px) {
     .btn-burger {
       display: block; } }
