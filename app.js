@@ -1,6 +1,6 @@
 // === Main Slider === //
 
-const swiper = new Swiper('.section-hero-image', {
+new Swiper('.section-hero-image', {
     pagination: {
       el: '.swiper-pagination',
       clickable: true
@@ -31,3 +31,39 @@ btnSel.forEach(item => {
 })
 
 // === // Accordeon === //
+
+// === Second Slider === //
+
+new Swiper('.slider-inner', {
+
+  loop: true,
+
+  pagination: {
+    el: '.slider-wrapper .dots',
+    clickable: true
+  },
+  navigation: {
+    nexEl: '.blogSlider_point-right',
+    prevEl: '.blogSlider_point-left'
+  },
+});
+
+// === // Second Slider === //
+
+// === Quotes Slider === //
+
+new Swiper('.quotesSlider', {
+
+  loop: true,
+  
+  pagination: {
+    el: '.slider-wrapper .dots',
+    clickable: true
+  },
+  // navigation: {
+  //   nexEl: '.blogSlider_point-right',
+  //   prevEl: '.blogSlider_point-left'
+  // },
+});
+
+// === // Quotes Slider === //

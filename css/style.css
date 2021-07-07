@@ -423,9 +423,44 @@ path {
   background-color: #f5f8ff;
   text-align: center; }
 
+.blogSlider_point-left {
+  position: absolute;
+  top: 50%;
+  left: -75px;
+  cursor: pointer;
+  transform: rotate(180deg);
+  opacity: .5;
+  transition: all .4s ease-in-out; }
+  .blogSlider_point-left:hover {
+    opacity: 1; }
+
+.blogSlider_point-right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: -75px;
+  opacity: .5;
+  transition: all .4s ease-in-out; }
+  .blogSlider_point-right:hover {
+    opacity: 1; }
+
+.slider-wrapper {
+  position: relative; }
+
+.dots-secondSlider {
+  margin-bottom: 0; }
+
+.swiper-pagination-bullet {
+  margin-top: 100px; }
+  .swiper-pagination-bullet + .swiper-pagination-bullet {
+    margin-left: 8px; }
+
 .blogSlider {
-  background-color: #ffffff;
-  margin-top: 85px; }
+  margin-top: 85px;
+  position: relative; }
+  .blogSlider_wrapper {
+    background-color: #ffffff;
+    list-style: none; }
   .blogSlider_inner {
     display: flex;
     padding: 60px 35px; }
@@ -435,20 +470,33 @@ path {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    grid-column-gap: 13px;
+    grid-row-gap: 13px; }
+    .blogSlider_pictures-wrapper {
+      display: block;
+      width: 100%;
+      height: 100%; }
     .blogSlider_pictures-first {
+      position: relative;
+      height: 100%;
       grid-row-start: 1;
       grid-row-end: 3;
       grid-column-start: 1;
       grid-column-end: 3; }
     .blogSlider_pictures-second {
+      position: relative;
+      height: 100%;
       grid-row: 1 / 2;
       grid-column: 3 / 3; }
     .blogSlider_pictures-third {
+      position: relative;
+      height: 100%;
       grid-row: 3 / 2;
       grid-column: 3 / 3; }
   .blogSlider_content {
-    width: 50%; }
+    width: 50%;
+    margin-left: 67px; }
     .blogSlider_content-title {
       margin-bottom: 32px;
       text-align: start; }
@@ -457,8 +505,59 @@ path {
       font-size: 14px;
       color: #8d96bd;
       text-align: start;
-      margin-bottom: 50px;
       line-height: 191%; }
+
+.lupa-first {
+  position: absolute;
+  display: block;
+  top: 38%;
+  left: 38%;
+  width: 65px;
+  height: 65px; }
+
+.lupa {
+  opacity: 0;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .1s ease-in-out; }
+
+.lupa-second {
+  position: absolute;
+  display: block;
+  top: 38%;
+  left: 36%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.lupa-third {
+  position: absolute;
+  display: block;
+  top: 38%;
+  left: 36%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.blogSlider_picture-item:hover .lupa {
+  opacity: 1; }
+
+.plan_btns {
+  margin-top: 50px; }
+
+.blogSlider_pictures-pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px; }
 
 .plan_btns-item-noBg--blog {
   margin-left: 10px;
@@ -474,6 +573,54 @@ path {
 
 .section-quotes {
   background-color: #eaf0ff; }
+  .section-quotes .section_inner {
+    display: flex; }
+
+.quotes_left {
+  width: 50%;
+  display: flex;
+  flex-direction: column; }
+
+.quotes-title {
+  margin-bottom: 40px; }
+
+.quotes-subtitle {
+  margin-bottom: 25px; }
+
+.quotes-text {
+  max-width: 325px;
+  color: #a4abc8;
+  line-height: 190%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500; }
+
+.quotesSlider_item {
+  position: relative; }
+
+.quotesSlider {
+  height: 250px; }
+
+.quotesSlider_content {
+  background-color: #fff;
+  max-width: 420px; }
+  .quotesSlider_content-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #8d96bd;
+    text-align: start;
+    line-height: 191%;
+    padding: 42px 70px 52px 70px; }
+  .quotesSlider_content-autor {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 22;
+    transform: translateX(-50%); }
+    .quotesSlider_content-autor-pic {
+      width: 100%;
+      height: auto;
+      display: block; }
 
 .section-faq {
   text-align: center; }
