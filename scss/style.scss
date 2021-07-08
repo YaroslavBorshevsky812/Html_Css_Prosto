@@ -635,6 +635,7 @@ path{
     .blogSlider {
         margin-top: 85px;
         position: relative;
+        box-shadow: 0px 4px 50px #d2e1ff;
         &_wrapper {
             background-color: #ffffff;
             list-style: none;
@@ -783,14 +784,19 @@ path{
 // === QUOTES ===
     .section-quotes {
         background-color: #eaf0ff;
+        overflow: hidden;
         .section_inner {
             display: flex;
+            justify-content: space-between;
         }
-    }
-    .quotes_left {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
+        &_left {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+        }
+        &_right {
+            width: 45%;
+        }
     }
     .quotes-title {
         margin-bottom: 40px;
@@ -807,36 +813,62 @@ path{
         font-weight: $fw-medium;
     }
 
-    .quotesSlider_item {
-        position: relative;
-    }
 
-    .quotesSlider {
-        height: 250px;
+    .slider-quotes-container {
+        width: 50vw;
+        margin-bottom: 80px;
     }
+    
+    
 
-    .quotesSlider_content{
-        background-color: #fff;
-        max-width: 420px;
+    .slider-quotes {
+        display: flex;
+        list-style: none;
+        padding: 48px;
+        
+        &_item {
+            max-width: 20vw;
+            background-color: #fff;
+            position: relative;
+            padding: 42px 70px 52px 70px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 50px #f3f5fa;
+            opacity: .5;
+            transition: opacity 3s ease-in-out;
+
+            &.swiper-slide-active {
+                opacity: 1;
+             }
+
             &-text {
                 @include roboto;
                 font-size: 14px;
                 color: #8d96bd;
                 text-align: start;
                 line-height: 191%;
-                padding: 42px 70px 52px 70px;
-        }
-        &-autor {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            z-index: 22;
-            transform: translateX(-50%);
-            &-pic {
-                width: 100%;
-                height: auto;
-                display: block;
             }
+            &-photo {
+                $height: 62px;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                z-index: 22;
+                transform: translateX(-50%);
+                margin-top: -$height/2;
+                width: 62px;
+                height: 62px;
+                border-radius: 100%;
+                background-color: #fff;
+            }
+        }
+    }
+
+    .dots-quotes {
+        margin-bottom: 0;
+        text-align: center;
+        margin-left: 140px;
+        .swiper-pagination-bullet {
+            margin-top: 0;
         }
     }
 

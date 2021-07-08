@@ -39,7 +39,7 @@ new Swiper('.slider-inner', {
   loop: true,
 
   pagination: {
-    el: '.slider-wrapper .dots',
+    el: '.slider-wrapper .dots-blog',
     clickable: true
   },
   navigation: {
@@ -52,18 +52,14 @@ new Swiper('.slider-inner', {
 
 // === Quotes Slider === //
 
-new Swiper('.quotesSlider', {
-
+new Swiper('.slider-quotes-container', {
   loop: true,
-  
+  slidesPerView: 'auto',
+  spaceBetween: 50,
   pagination: {
-    el: '.slider-wrapper .dots',
+    el: '.section-quotes .dots-quotes',
     clickable: true
   },
-  // navigation: {
-  //   nexEl: '.blogSlider_point-right',
-  //   prevEl: '.blogSlider_point-left'
-  // },
 });
 
 // === // Quotes Slider === //
