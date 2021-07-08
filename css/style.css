@@ -577,7 +577,8 @@ path {
   overflow: hidden; }
   .section-quotes .section_inner {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
   .section-quotes_left {
     width: 45%;
     display: flex;

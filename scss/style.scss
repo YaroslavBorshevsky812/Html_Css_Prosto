@@ -788,6 +788,7 @@ path{
         .section_inner {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
         &_left {
             width: 45%;
