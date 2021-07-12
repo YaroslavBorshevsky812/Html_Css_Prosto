@@ -40,8 +40,8 @@ $padding-vertical-xs: $base * 5;
 $transition: .2s linear;
 
 
-// $breakpoint-s-min: 325px;
-// $breakpoint-s-max: $breakpoint-s-min - 1px;
+$breakpoint-s-min: 520px;
+$breakpoint-s-max: $breakpoint-s-min - 1px;
 
 $breakpoint-sm-min: 576px;
 $breakpoint-sm-max: $breakpoint-sm-min - 1px;
@@ -76,6 +76,10 @@ h1 {
     @media (max-width: $breakpoint-lg-min) {
         font-size: 36px;
     }
+    @media (max-width: $breakpoint-s-min) {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
 }
 
 h2 {
@@ -87,6 +91,9 @@ h2 {
         @media (max-width: $breakpoint-lg-min) {
             font-size: 24px;
         }
+        @media (max-width: $breakpoint-s-min) {
+            font-size: 12px;
+        }
 }
 
 h3 {
@@ -95,6 +102,9 @@ h3 {
     font-size: 24px;
     font-weight: $fw-medium;
     color: #3d4f9f;
+    @media (max-width: $breakpoint-s-min) {
+        font-size: 24px;
+    }
 }
 
 h4 {
@@ -107,6 +117,10 @@ h4 {
     text-transform: uppercase;
     @media (max-width: $breakpoint-lg-min) {
         font-size: 8px;
+    }
+    @media (max-width: $breakpoint-s-min) {
+        font-size: 12px;
+        margin-bottom: 5px;
     }
 }
 
@@ -127,7 +141,10 @@ h5 {
 
 body {
     padding-top: $base * 18;
-    @include roboto
+    @include roboto;
+    @media (max-width:$breakpoint-s-max) {
+        padding-top: $base * 12;
+    }
 }
 
 .section_outer {
@@ -141,14 +158,13 @@ body {
     padding-bottom: $padding-vertival;
     &--wide {
         max-width: 1200px;
+        @media (max-width: $breakpoint-s-min) {
+            padding-left: 10px;
+        }
     }
     @media (max-width: $breakpoint-lg-min) {
         padding: 60px 40px;
     }
-    // @media (max-width: $breakpoint-md-min) {
-    //     padding-top: 40px;
-    //     padding-bottom: 40px;
-    // }
 }
 
 path{
@@ -170,6 +186,9 @@ path{
         .section_inner {
             padding-top: $padding-vertical-xs;
             padding-bottom: $padding-vertical-xs;
+            @media (max-width: $breakpoint-s-min) {
+                padding: 10px 10px;
+            }
         }
         &::before {
             content: '';
@@ -339,6 +358,9 @@ path{
         background-color: #f1f5ff;
         height: 570px;
         position: relative;
+        @media (max-width:$breakpoint-s-max) {
+           max-height: 410px;
+        }
     }
 
     .slider-image-item {
@@ -360,7 +382,9 @@ path{
         text-align: center;
         padding-top: $base * 23;
         max-width: $base * 146; 
-
+        @media (max-width:$breakpoint-s-max) {
+            padding-top: $base * 13;
+        }
             &-p {
                 color: #8d96bd;
                 line-height: 191%;
@@ -369,8 +393,22 @@ path{
                 display: inline-block;
                 max-width: $base * 126;
                 margin-bottom: 20px;
+                @media (max-width:$breakpoint-s-max) {
+                    max-width: 215px;
+                }
+                @media (max-width:$breakpoint-s-max) {
+                    font-size: 8px;
+                }
             }
-    }
+            &-title {
+                @media (max-width:$breakpoint-s-max) {
+                    max-width: 215px;
+                    display: block;
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                        }
+                }
+            }
 
     .swiper-pagination-bullets {
         margin-bottom: 35px;
@@ -425,8 +463,6 @@ path{
         justify-content: space-between;
         align-items: center;
             @media (max-width: $breakpoint-lg-min) {
-                // padding-left: 20px;
-                // padding-left: 40px;
                 max-width: 400px;
                 margin: 0 auto;
             }
@@ -440,17 +476,16 @@ path{
                 width: 50%;
                 text-align: center;
                 margin-bottom: 40px;
-                // &:first-child {
-                //     width: 100%;
-                //     text-align: center;
-                // }
                 &:last-child {
                     width: 100%;
                     margin: 0 auto;
                     text-align: center;
                 }
 
-             }
+            }
+            @media (max-width: $breakpoint-s-min) {
+                width: 100%;
+            }
         }
         @media (max-width: $breakpoint-lg-min) {
            flex-wrap: wrap;
@@ -500,6 +535,9 @@ path{
         }
         @media (max-width: 700px) {
             padding-bottom: 0px;
+        }
+        @media (max-width: $breakpoint-s-min) {
+            padding-top: 40px;
         }
     }
 
@@ -587,6 +625,9 @@ path{
         @media (max-width: $breakpoint-sm-min) {
             flex-wrap: wrap;
         }
+        @media (max-width: $breakpoint-s-min) {
+            margin-top: 40px;
+        }
         &-item {
             position: relative;
             width: 25%;
@@ -639,16 +680,27 @@ path{
         @media (max-width: $breakpoint-sm-min) {
             margin-top: 50px;
         }
+        @media (max-width: $breakpoint-s-min) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .btn-features--left {
         padding: 13px 16px;
         background-color: #ffd7d7;
         color: #d43f3f;
+        @media (max-width: $breakpoint-s-min) {
+            margin-bottom: 20px;
+        }
     }
 
     .btn-features--right {
         margin-left: 0;
+        @media (max-width: $breakpoint-s-min) {
+            margin: 0 auto;
+            margin-top: 20px;
+        }
     }
 
     .or {  
@@ -814,6 +866,10 @@ path{
                 flex-wrap: wrap;
                 margin-top: 20px;
             }
+            @media (max-width: $breakpoint-s-min) {
+                padding: 20px 15px;
+            }
+            
         }
         &_pictures {
             width: 50%;
@@ -826,6 +882,7 @@ path{
             grid-row-gap: 13px;
 
             @media (max-width: $breakpoint-lg-min) {
+                width: 100%;
                 margin: 0 auto;
                 margin-bottom: 30px;
                 max-width: 240px;
@@ -873,6 +930,10 @@ path{
                     text-align: center;
                     font-size: 24px;
                 }
+                @media (max-width: $breakpoint-s-min) {
+                    font-size: 12px;
+                    margin-bottom: 16px;
+                }
             }
             
                 
@@ -886,6 +947,10 @@ path{
                 @media (max-width: $breakpoint-lg-min) {
                     text-align: center;
                     font-size: 10px;
+                }
+                @media (max-width: $breakpoint-s-min) {
+                    font-size: 8px;
+                    margin-bottom: 16px;
                 }
             }
         }
@@ -955,6 +1020,12 @@ path{
             margin-top: 25px;
             justify-content: center;
         }
+        &-item {
+            @media (max-width: $breakpoint-s-min) {
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+        }
     }
 
     .blogSlider_pictures-pic {
@@ -974,12 +1045,22 @@ path{
         &:hover {
             opacity: 1;
         }
+        @media (max-width: $breakpoint-lg-min) {
+            margin-left: 0;
+            font-size: 8px;
+        }
+        @media (max-width: $breakpoint-s-min) {
+            
+        }
     }
 
     .btn--blog {
         margin-left: 0;
         @media (max-width: $breakpoint-lg-min) {
             margin-right: 0;
+        }
+        @media (max-width: $breakpoint-md-min) {
+            font-size: 8px;
         }
     }
 
@@ -996,6 +1077,9 @@ path{
             align-items: center;
             @media (max-width: $breakpoint-lg-min) {
                 padding: 60px 40px;
+            }
+            @media (max-width: $breakpoint-s-min) {
+                padding: 40px 0px;
             }
         }
         &_left {
@@ -1025,11 +1109,17 @@ path{
         @media (max-width: $breakpoint-lg-min) {
             margin-bottom: 20px;
         }
+        @media (max-width: $breakpoint-s-min) {
+            margin-bottom: 10px;
+        }
     }
     .quotes-subtitle {
         margin-bottom: 25px;
         @media (max-width: $breakpoint-lg-min) {
             margin-bottom: 12px;
+        }
+        @media (max-width: $breakpoint-s-min) {
+            margin-bottom: 5px;
         }
     }
     .quotes-text {
@@ -1041,6 +1131,9 @@ path{
         font-weight: $fw-medium;
         @media (max-width: $breakpoint-sm-min) {
             margin: 0 auto;
+        }
+        @media (max-width: $breakpoint-s-min) {
+            padding: 0px 30px;
         }
     }
 
@@ -1056,6 +1149,9 @@ path{
         @media (max-width: $breakpoint-sm-min) {
             width: 78%;
             margin-left: -20px;
+        }
+        @media (max-width:$breakpoint-s-max) {
+            width: 80%;
         }
     }
 
@@ -1092,7 +1188,11 @@ path{
                 padding: 21px 35px 50px 35px;
             }
             @media (max-width: $breakpoint-sm-min) {
-                max-width: 200px;
+                // max-width: 200px;
+                max-width: 30vw;
+            }
+            @media (max-width:$breakpoint-s-max) {
+                max-width: 30vw;
             }
 
             &.swiper-slide-active {
@@ -1112,6 +1212,10 @@ path{
                     display: block;
                     margin: 0 auto;
                 }
+                @media (max-width:$breakpoint-s-max) {
+                    font-size: 8px;
+                }
+    
             }
             &-photo {
                 $height: 62px;
@@ -1197,6 +1301,11 @@ path{
                 align-items: center;
                 transition: 1s;
                 overflow: hidden;
+                @media (max-width: $breakpoint-s-min) {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 40px;
+                }
                 &-text {
                     text-align: start;
                     @include roboto;
@@ -1206,8 +1315,15 @@ path{
                     color: #8d96bd;
                     max-width: 395px;
                     margin-right: 60px;
+                    @media (max-width: $breakpoint-s-min) {
+                        margin-right: 0;
+                        
+                    }
                 }
             }
+        }
+        @media (max-width: $breakpoint-s-min) {
+            margin-top: 10px;
         }
     }
 
@@ -1219,6 +1335,9 @@ path{
         &:hover {
             border: 1px solid #8d96bd;
         }
+        @media (max-width: $breakpoint-s-min) {
+            margin-top: 20px;
+        }
     }
 
     .accordeon_item.active .accordeon_icon-pic {
@@ -1228,6 +1347,10 @@ path{
     .accordeon_item.active .accordeon_item-content {
         height: 100px;
         padding: 0px 15px 25px 80px;
+        @media (max-width: $breakpoint-s-min) {
+            height: 190px;
+            padding: 0px 15px 25px 40px;
+        }
     }
 
 // === / FAQ ===
@@ -1333,6 +1456,11 @@ path{
         @include quicksand;
         font-size: 13px;
         font-weight: $fw-bold;
+        @media (max-width:$breakpoint-s-max) {
+            width: 180px;
+            font-size: 8px;
+            padding: 15px;
+        }
     }
 
     .btn--form {
@@ -1369,6 +1497,11 @@ path{
         margin-left: $base * 18 + $base * 6;
         font-size: $base * 3;
         @include quicksand;
+        @media (max-width:$breakpoint-s-max) {
+            margin-left: 0;
+            text-align: center;
+            
+        }
     }
     @media (max-width: $breakpoint-lg-min) {
         .main_navigation--footer {
@@ -1376,7 +1509,6 @@ path{
         }
         .nav--footer{
             margin-bottom: 20px;
-            // @media (max-width: 320px)
         }
         .socials-wrapper{
             margin-bottom: 20px;
@@ -1392,6 +1524,24 @@ path{
         .logo--footer {
             margin: 0 auto;
             margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width:$breakpoint-s-max) {
+        .nav-wrapper {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .nav-wrapper-item {
+            &:first-child {
+                margin-bottom: 10px;
+            }
+            & + & {
+                margin-left: 0px;
+                margin-bottom: 10px;
+            }
+            // margin: 0 auto;
         }
     }
     
