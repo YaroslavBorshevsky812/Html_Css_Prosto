@@ -193,12 +193,18 @@ path{
         &::before {
             content: '';
             position: fixed;
-            top: 202px;
+            top: 205px;
             left: 0;
             display: none;
             width: 100vw;
             height: 100vh;
             background-color: rgba(0, 0, 0, .5);
+            // @media (max-width: $breakpoint-s-min) {
+            //     top: 305px;
+            // }
+            @media (max-width: $breakpoint-s-min) {
+                top: 305px;
+            }
         }
         &--active {
             &::before {
@@ -832,6 +838,10 @@ path{
         position: relative;
     }
 
+    .swiper-container {
+        overflow: hidden;
+    }
+
     .dots-secondSlider {
         margin-bottom: 0;
     }
@@ -1141,7 +1151,7 @@ path{
     .slider-quotes-container {
         width: 50vw;
         margin-bottom: 80px;
-        overflow: visible;
+        overflow:hidden;
         @media (max-width: $breakpoint-lg-min) {
             width: 60vw;
             margin-bottom: 40px;

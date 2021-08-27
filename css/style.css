@@ -115,12 +115,15 @@ path {
   .section-header::before {
     content: '';
     position: fixed;
-    top: 202px;
+    top: 205px;
     left: 0;
     display: none;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); }
+    @media (max-width: 520px) {
+      .section-header::before {
+        top: 305px; } }
   .section-header--active::before {
     display: block; }
 
@@ -632,6 +635,9 @@ path {
 .slider-wrapper {
   position: relative; }
 
+.swiper-container {
+  overflow: hidden; }
+
 .dots-secondSlider {
   margin-bottom: 0; }
 
@@ -883,7 +889,7 @@ path {
 .slider-quotes-container {
   width: 50vw;
   margin-bottom: 80px;
-  overflow: visible; }
+  overflow: hidden; }
   @media (max-width: 992px) {
     .slider-quotes-container {
       width: 60vw;
